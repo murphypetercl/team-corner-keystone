@@ -340,6 +340,7 @@ const apps = [
     keystone,
     apps,
     configureExpress: app => {
+      app.use(cors());
       // Required for production mode to use secure cookies
       app.set('trust proxy', 1);
     },
