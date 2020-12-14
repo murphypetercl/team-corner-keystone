@@ -5,6 +5,7 @@ const { MongoId } = require('@keystonejs/fields-mongoid');
 const { atTracking, byTracking } = require('@keystonejs/list-plugins');
 const { GraphQLApp } = require('@keystonejs/app-graphql');
 const { AdminUIApp } = require('@keystonejs/app-admin-ui');
+const cors = require('cors');
 
 const { MongooseAdapter: Adapter } = require('@keystonejs/adapter-mongoose');
 const mongoUriToConnectTo = process.env.NODE_ENV === 'production' ? (process.env.MONGO_URI) : ('mongodb://127.0.0.1:27017/team-corner');
